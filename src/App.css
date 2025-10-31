@@ -2,22 +2,9 @@
   text-align: center;
 }
 
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 .App-link {
   color: #61dafb;
 }
-
 
 
 .task-input {
@@ -38,14 +25,18 @@
   padding: 0.5rem;
 }
 
+/* List item styles */
 .task-list li {
   display: flex;
   justify-content: space-between;
+  line-height: 1.5;
   align-items: center;
-  background: white;
-  padding: 0.5rem;
+  background: #f9f9f6;
+  font-weight: bold;
+  padding: 0.75rem;
   margin-bottom: 0.5rem;
   border-radius: 6px;
+  border-style: outset;
 }
 
 .task-main {
@@ -53,6 +44,7 @@
   cursor: pointer;
 }
 
+/* date text */ 
 .task-meta {
   display: flex;
   gap: 1rem;
@@ -72,17 +64,26 @@
 
 .done .task-text {
   text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
   color: gray;
+}
+
+.task-list li.done {
+  border-style: inset;
+  background-color: #c0e9c9;
 }
 
 /* Base light mode for the body */
 body {
-  font-family: sans-serif;
-  background: #f7f7f7;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background: #fff9e3;
   color: #333;
   padding: 2rem;
   transition: background 0.3s, color 0.3s;
 }
+
+/* Heading styles for light mode */
 
 .app {
   max-width: 600px;
@@ -98,16 +99,18 @@ body {
 
 /* Dark mode applied to body */
 body.dark {
-  background: #121212;
-  color: #eee;
+  background: #1e1e1e;
+  color: #eee; 
 }
+
+/* Heading styles for dark mode */
 
 body.dark .app {
   color: #eee;
 }
 
 body.dark .task-list li {
-  background: #1e1e1e;
+  background: #333;
   color: #eee;
 }
 
@@ -116,10 +119,17 @@ body.dark .task-input select,
 body.dark .task-input button {
   background: #1e1e1e;
   color: #eee;
-  border: 1px solid #333;
+  border: 1px solid #aaa;
+}
+
+body.dark .task-meta{
+  color: #aaa;
 }
 
 .priority.low { background-color: #3b82f6; }
 .priority.medium { background-color: #f59e0b; }
 .priority.high { background-color: #ef4444; }
 
+body.dark .task-list li.done {
+  background-color: #c0e9c9;
+}
