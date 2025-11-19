@@ -133,3 +133,150 @@ body.dark .task-meta{
 body.dark .task-list li.done {
   background-color: #c0e9c9;
 }
+
+/* Dark mode calendar styles */
+body.dark .calendar-day {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+body.dark .calendar-day span {
+  color: #eee;
+}
+
+body.dark .calendar-day-header {
+  color: #ccc;
+}
+
+body.dark .calendar-view h2 {
+  color: #eee;
+}
+
+body.dark .calendar-header button {
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark .marker {
+  background: #ef4444;
+}
+
+body.dark .daily-task-list {
+  background: #1f1f1f;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+/* ------------------------- */
+/*  Sexy Accent + Highlights */
+/* ------------------------- */
+
+:root {
+  --accent: #3b82f6; /* electric blue — change if you want */
+}
+
+/* TODAY highlight */
+.calendar-day.today {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* SELECTED DAY highlight */
+.calendar-day.selected {
+  background: var(--accent);
+  color: white !important;
+  border: 2px solid var(--accent);
+}
+
+/* Make sure day numbers stay visible */
+.calendar-day span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Marker sits above background */
+.marker {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: var(--accent);
+}
+
+/* Dark mode overrides for sexy theme */
+body.dark .calendar-day.today {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+body.dark .calendar-day.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+body.dark .marker {
+  background: var(--accent);
+}
+
+/* Regular calendar and daily task list styles */ 
+
+.view-switch {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-view {
+  margin-top: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-day {
+  height: 70px;
+  background: #eee;
+  border-radius: 6px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.calendar-day span {
+  font-size: 14px;
+}
+
+.marker {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.daily-task-list {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
